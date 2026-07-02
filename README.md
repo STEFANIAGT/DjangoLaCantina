@@ -29,13 +29,13 @@ Codice
 ```
 DjangoLaCantina/
 │
-|
 ├── DjangoLaCantina/   # Configurazione principale (settings, urls, wsgi, asgi)
 ├── core/              # App principale: modelli, viste, form, template
 ├── static/            # CSS, immagini
 ├── templates/         # Template globali
 ├── manage.py
 └── db.sqlite3
+
 
 # Avvio del Progetto
 bash
