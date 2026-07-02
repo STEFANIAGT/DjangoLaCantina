@@ -35,7 +35,9 @@ DjangoLaCantina/
 ├── templates/         # Template globali
 ├── manage.py
 └── db.sqlite3
+```
 
+---
 
 # Avvio del Progetto
 bash
@@ -50,7 +52,7 @@ python manage.py runserver
 Apri nel browser:
 http://127.0.0.1:8000/ (127.0.0.1 in Bing)
 
-Funzionalità Principali
+# Funzionalità Principali
 CRUD vini
 
 Lista vini e dettaglio
@@ -63,6 +65,6 @@ Migrazioni già configurate
 
 
 
- Note
+# Note
 Il repository contiene solo i file essenziali del progetto Django.
 L’ambiente virtuale è escluso tramite .gitignore.
