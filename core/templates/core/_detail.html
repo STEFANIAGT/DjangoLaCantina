@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Dettaglio Vino{% endblock %}
+
+{% block content %}
+
+&nbsp; <h2>{{ object.nome }} ({{ object.annata }})</h2>
+
+&nbsp; <p>Cantina: {{ object.cantina }}</p>
+
+&nbsp; <p>Regione: {{ object.regione }}</p>
+
+&nbsp; <p>Media voto: {{ object.voto_medio|floatformat:1 }}</p>
+
+&nbsp; <a href="{% url 'vota_wine' object.pk %}">Vota questo vino</a>
+
+{% endblock %}

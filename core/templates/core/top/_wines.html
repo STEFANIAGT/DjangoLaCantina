@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Classifica Vini{% endblock %}
+
+{% block content %}
+
+&nbsp; <h2>Top 10 Vini</h2>
+
+&nbsp; <table>
+
+&nbsp;   <tr><th>Posizione</th><th>Vino</th><th>Media voto</th></tr>
+
+&nbsp;   {% for wine in object\_list %}
+
+&nbsp;   <tr>
+
+&nbsp;     <td>{{ forloop.counter }}</td>
+
+&nbsp;     <td>{{ wine.nome }} ({{ wine.annata }})</td>
+
+&nbsp;     <td>{{ wine.voto\_medio|floatformat:1 }}</td>
+
+&nbsp;   </tr>
+
+&nbsp;   {% endfor %}
+
+&nbsp; </table>
+
+{% endblock %}

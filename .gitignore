@@ -1,0 +1,8 @@
+# created by virtualenv automatically
+# Ambiente virtuale
+Lib/
+Scripts/
+__pycache__/
+*.pyc
+db.sqlite3
+

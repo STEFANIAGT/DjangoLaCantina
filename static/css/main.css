@@ -1,0 +1,14 @@
+body {
+  background-color: #f8f4ef;
+}
+
+body {
+  background-image: url('../img/vitigno.jpg');
+  background-size: cover;         /* scala l’immagine per riempire tutta la finestra */
+  background-position: center;     /* centra l’immagine */
+  background-repeat: no-repeat;    /* evita ripetizioni */
+}
+body {
+  font-weight: bold;              /* rende il testo in grassetto */
+  font-size: 1.5em;               /* aumenta la dimensione dei caratteri (puoi modificare il valore a tuo piacimento) */
+}

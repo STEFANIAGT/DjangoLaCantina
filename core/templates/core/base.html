@@ -1,0 +1,118 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+
+&nbsp; <meta charset="utf-8">
+
+&nbsp; <title>{% block title %}La Cantina{% endblock %}</title>
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+{% if request.resolver_match.url_name == "wine_detail" %}
+<style>
+  body {
+    background-color: #fdf6f0; /* sfondo chiaro tipo carta pergamena */
+    color: #fdf6f0;            /* testo color vino intenso */
+  }
+
+  h2 {
+    color: #800000;            /* titolo in rosso vino */
+  }
+
+  a {
+    color: #006666;            /* link in verde bottiglia */
+  }
+</style>
+{% endif %}
+
+<link href="{% static 'css/main.css' %}" rel="stylesheet">
+{% if request.resolver_match.url_name == "wine_detail" %}
+  <!-- Stili specifici qui -->
+{% endif %}
+{% if request.resolver_match.url_name == "wine_detail" %}
+<style>
+  body {
+    font-size: 30px;       /* ingrandisce tutto il corpo testo */
+  }
+
+  h2 {
+    font-size: 40px;       /* titoli belli grandi */
+  }
+
+  p {
+    font-size: 35px;       /* descrizioni leggibili e eleganti */
+  }
+
+  a {
+    font-size: 20px;
+  }
+</style>
+{% endif %}
+
+</head>
+
+
+
+
+<body style="background-image: url('{% static "img/Vitigno.jpg" %}');
+
+             background-size: cover;
+             background-position: center;
+             background-repeat: no-repeat;">
+
+
+&nbsp; <header>
+        {% block header %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'wine_list' %}">La Cantina</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'wine_list' %}">Elenco Vini</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'import_wines' %}">Importa CSV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'top_wines' %}">Classifica</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        {% endblock %}
+    </header>
+
+
+
+&nbsp; <main>
+
+        {% block content %}{% endblock %}
+
+&nbsp; </main>
+
+<footer class="bg-light text-center mt-4 py-4">
+
+
+
+&nbsp;   {% block footer %}<large>©2025 La Cantina</large>{% endblock %}
+
+&nbsp; </footer>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+
+</html>

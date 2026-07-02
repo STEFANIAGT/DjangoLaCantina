@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    &nbsp; <h2>Elenco Vini</h2>
+
+
+&nbsp; <ul>
+
+&nbsp;   {% for wine in object_list %}
+
+&nbsp;     <li>
+
+&nbsp;       <a href="{% url 'wine_detail' wine.pk %}">
+
+&nbsp;         {{ wine.nome }} ({{ wine.annata }})
+
+&nbsp;       </a>
+
+&nbsp;     </li>
+
+&nbsp;   {% endfor %}
+
+&nbsp; </ul>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Importa Vini{% endblock %}
+
+{% block content %}
+
+&nbsp; <h2>Importa Vini da CSV</h2>
+
+&nbsp; <form method="post" enctype="multipart/form-data">{% csrf_token %}
+
+&nbsp;   <input type="file" name="csv_file" accept=".csv">
+
+&nbsp;   <button type="submit">Importa</button>
+
+&nbsp; </form>
+
+{% endblock %}

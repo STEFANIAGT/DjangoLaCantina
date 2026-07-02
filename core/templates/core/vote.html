@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+&nbsp; <h2>Vota: {{ wine.nome }}</h2>
+
+&nbsp; <form method="post">{% csrf_token %}
+
+&nbsp;   {{ form.as_p }}
+
+&nbsp;   <button type="submit">Invia voto</button>
+
+&nbsp; </form>
+
+{% endblock %}
+
