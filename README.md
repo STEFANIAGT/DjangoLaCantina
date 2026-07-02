@@ -24,8 +24,9 @@ SQLite (default)
 HTML / CSS (template + static)
 
 # Struttura del Progetto
-...
+
 Codice
+```
 DjangoLaCantina/
 │
 |
@@ -35,7 +36,8 @@ DjangoLaCantina/
 ├── templates/         # Template globali
 ├── manage.py
 └── db.sqlite3
-Avvio del Progetto
+
+# Avvio del Progetto
 bash
 git clone https://github.com/STEFANIAGT/DjangoLaCantina.git
 cd DjangoLaCantina
