@@ -1,7 +1,7 @@
-DjangoLaCantina
+# DjangoLaCantina
 Applicazione Django per la gestione, visualizzazione e valutazione dei vini.
 
-Overview
+# Overview
 DjangoLaCantina è un progetto web basato su Django 5 che permette di:
 
 gestire una collezione di vini
@@ -23,10 +23,12 @@ SQLite (default)
 
 HTML / CSS (template + static)
 
-Struttura del Progetto
+# Struttura del Progetto
+...
 Codice
 DjangoLaCantina/
 │
+|
 ├── DjangoLaCantina/   # Configurazione principale (settings, urls, wsgi, asgi)
 ├── core/              # App principale: modelli, viste, form, template
 ├── static/            # CSS, immagini
